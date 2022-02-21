@@ -9,3 +9,8 @@
           - name: Loopback888
             description: Created loopback
             enabled: true
+
+    - name: Add IP address to L888
+      cisco.ios.ios_l3_interface:
+        name: Loopback888
+        ipv4: 192.18.255.88/32
