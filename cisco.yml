@@ -1,0 +1,11 @@
+---
+- hosts: routers
+  become: yes      #to use enable
+
+  tasks:
+    - name: Create Loopback888
+      cisco.ios.ios_interfaces:
+        config:
+          - name: Loopback888
+            description: Created loopback
+            enabled: true
